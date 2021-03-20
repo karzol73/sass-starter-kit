@@ -1,0 +1,7 @@
+@function map-deep-get($map, $keys...)
+    @each $key in $keys
+        @if type-of($map) != 'map'
+            @warn 'It is not a map.'
+            @return false
+        $map: map-get($map, $key)
+    @return $map

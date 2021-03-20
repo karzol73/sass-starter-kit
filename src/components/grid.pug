@@ -1,0 +1,33 @@
+// here add the column number
+- var column = 12
+
+h3.text-secondary-200 Simple Flexbox Grid
+.divider-3
+// grid example
+- for (var i = 1; i < column; i++) {
+.row
+    div(class=`col col-${i}`) 
+        .col-content.bg-secondary-200.bold .col-#{i}
+    div(class=`col col-${column - i}`)
+        .col-content.bg-secondary-300.bold .col-#{column - i}
+- }
+.divider-3
+// offset-grid example
+.row
+    div(class='col col-3')
+        .col-content.bg-secondary-200 .col-3
+    div(class='col col-offset-3')
+    div(class='col col-5')
+        .col-content.bg-secondary-200 .col-5
+.row
+    div(class='col col-offset-2')
+    div(class='col col-7')
+        .col-content.bg-secondary-200 .col-7
+    div(class='col col-offset-3')
+.row
+    div(class='col col-offset-1')
+    div(class='col col-4')
+        .col-content.bg-secondary-200 .col-4
+    div(class='col col-offset-3')
+    div(class='col col-4')
+        .col-content.bg-secondary-200 .col-4

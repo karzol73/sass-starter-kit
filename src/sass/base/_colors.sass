@@ -1,0 +1,6 @@
+@each $color, $shades in $colors
+    @each $shade, $value in $shades
+        .text-#{$color}-#{$shade}
+            color: var(--clr-#{$color}-#{$shade})
+        .bg-#{$color}-#{$shade}
+            background: var(--clr-#{$color}-#{$shade})

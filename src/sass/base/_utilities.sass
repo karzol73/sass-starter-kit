@@ -1,0 +1,41 @@
+@for $i from 1 through 5
+    // margin
+    .m-#{$i}
+        margin: calc(var(--spacer) * #{$i})
+    .m-x-#{$i}
+        margin: 0 calc(var(--spacer) * #{$i})
+    .m-y-#{$i}
+        margin: calc(var(--spacer) * #{$i}) 0
+    .m-l-#{$i}
+        margin-left: calc(var(--spacer) * #{$i})
+    .m-r-#{$i}
+        margin-right: calc(var(--spacer) * #{$i})
+    .m-t-#{$i}
+        margin-top: calc(var(--spacer) * #{$i})
+
+    // padding
+    .p-#{$i}
+        padding: calc(var(--spacer) * #{$i})
+    .p-x-#{$i}
+        padding: 0 calc(var(--spacer) * #{$i})
+    .p-y-#{$i}
+        padding: calc(var(--spacer) * #{$i}) 0
+    .p-l-#{$i}
+        padding-left: calc(var(--spacer) * #{$i})
+    .p-r-#{$i}
+        padding-right: calc(var(--spacer) * #{$i})
+    .p-t-#{$i}
+        padding-top: calc(var(--spacer) * #{$i})
+
+    // height
+    .h-#{$i}
+        height: calc(var(--spacer) * #{$i})
+
+    //width
+    .w-#{$i}
+        width: calc(var(--spacer) * #{$i})
+
+    //divider
+    .divider-#{$i}
+        height: calc(var(--spacer) * #{$i})
+        width: 100%

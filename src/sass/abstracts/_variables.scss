@@ -1,0 +1,111 @@
+$breakpoints: (
+    sm: 640px,
+    md: 768px,
+    lg: 1024px,
+    xl: 1280px,
+    xxl: 1536px
+);
+
+$layout: (
+    small: (
+        margin: 1.5rem,
+        spacer: 1rem,
+        border: 3px
+    ),
+    large: (
+        margin: 5rem,
+        spacer: 1.5rem,
+        border: 4px
+    )
+);
+
+$font-stack: (
+  roboto: (
+    light: (
+      family: (Roboto, sans-serif),
+      weight: 300,
+      style: normal
+    ),
+    light-italic: (
+      family: (Roboto, sans-serif),
+      weight: 300,
+      style: italic
+    ),
+    regular: (
+      family: (Roboto, sans-serif),
+      weight: 400,
+      style: normal
+    ),
+    regular-italic: (
+      family: (Roboto, sans-serif),
+      weight: 400,
+      style: italic
+    ),
+    bold: (
+      family: (Roboto, sans-serif),
+      weight: 700,
+      style: normal
+    ),
+    bold-italic: (
+      family: (Roboto, sans-serif),
+      weight: 700,
+      style: italic
+    )
+  ),
+  lora: (
+    regular: (
+      family: (Lora, serif),
+      weight: 400,
+      style: normal
+    ),
+    regular-italic: (
+      family: (Lora, serif),
+      weight: 400,
+      style: italic
+    ),
+    bold: (
+      family: (Lora, serif),
+      weight: 600,
+      style: normal
+    ),
+    bold-italic: (
+      family: (Lora, serif),
+      weight: 600,
+      style: italic
+    )
+  )
+);
+
+$type-scale: (
+    small: (
+        font-size: 1rem,
+        ratio: 1.333
+    ),
+    large: (
+        font-size: 1.2rem,
+        ratio: 1.618
+    )  
+);
+
+$grid: (
+    column: 12,
+    gap: 0.1rem
+);
+
+$colors: (
+    primary: (
+        100: hsl(0, 0%, 70%),
+        200: hsl(0, 0%, 40%),
+        300: hsl(0, 0%, 20%)
+    ),
+    secondary: (
+        100: hsl(208, 100%, 59%),
+        200: hsl(208, 100%, 43%),
+        300: hsl(208, 100%, 35%)
+    ),
+    background: (
+        100: hsl(0, 0%, 97%),
+        200: hsl(0, 0%, 87%),
+        300: hsl(0, 0%, 67%)
+    )
+);

@@ -1,0 +1,39 @@
+:root
+    // add color variables
+    @each $color, $shades in $colors
+        @each $shade, $value in $shades
+            --clr-#{$color}-#{$shade}: #{$value}
+
+    // add media query breakpoints variables
+    @each $prop, $value in $breakpoints
+        --#{$prop}: #{$value}
+
+    // layout variables
+    @each $screen-size, $variables in $layout
+        @if $screen-size == small
+            @each $prop, $value in $variables
+                --#{$prop}: #{$value}
+        @else
+            @media (min-width: 1024px)
+                @each $prop, $value in $variables
+                    --#{$prop}: #{$value}
+
+    // responsive font-size variables
+    @each $screen-size, $font-size in $type-scale
+        @if $screen-size == small
+            @each $prop, $value in $font-size
+                --#{$prop}: #{$value}
+        @else
+            @media (min-width: 1024px)
+                @each $prop, $value in $font-size
+                    --#{$prop}: #{$value}
+
+    // add grid variables
+    @each $prop, $value in $grid
+        --#{$prop}: #{$value}
+
+    // type-scale and line-heights variable
+    --h4: calc(var(--font-size) * var(--ratio))
+    --h3: calc(var(--h4) * var(--ratio))
+    --h2: calc(var(--h3) * var(--ratio))
+    --h1: calc(var(--h2) * var(--ratio))

@@ -1,0 +1,25 @@
+@import url('https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,600;1,400;1,600&family=Roboto:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap')
+
+// use mixin configuring the font stack
+@mixin font($group, $variant: regular, $properties: family weight style, $stack: $font-stack)
+    $font-properties: map-deep-get($stack, $group, $variant)
+
+    @if $font-properties
+        @each $property, $values in $font-properties
+            @if contains($properties, $property)
+                font-#{$property}: map-get($font-properties, $property)
+
+// configuring fonts
+// header fonts
+h1, h2, h3, h4
+    @include font(roboto, bold)
+
+// base fonts
+p
+    @include font(lora, regular)
+
+p.blocknote
+    @include font(lora, regular-italic)
+
+a
+    @include font(lora, bold)

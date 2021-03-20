@@ -1,0 +1,19 @@
+$column: map-get($grid, column)
+
+.row
+    display: flex
+    flex-wrap: wrap
+
+[class^=col-]
+    flex-basis: 100%
+
+@for $i from 1 through $column
+    .col-#{$i}
+        padding: var(--gap)
+        flex: 0 0 100%
+        +mq(lg)
+            flex: 0 0 (100% / ($column / $i))
+    .col-offset-#{$i}
+        margin-left: 0
+        +mq(lg)
+            margin-left: 100% / ($column / $i)
