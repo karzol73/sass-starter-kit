@@ -9,12 +9,12 @@
             @if contains($properties, $property)
                 font-#{$property}: map-get($font-properties, $property)
 
-// configuring fonts
-// header fonts
+// configuring font familes
+// header font
 h1, h2, h3, h4
     @include font(roboto, bold)
 
-// base fonts
+// base font
 p
     @include font(lora, regular)
 
