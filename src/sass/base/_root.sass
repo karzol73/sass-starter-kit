@@ -8,7 +8,7 @@
     @each $prop, $value in $breakpoints
         --#{$prop}: #{$value}
 
-    // layout variables
+    // add layout variables
     @each $screen-size, $variables in $layout
         @if $screen-size == small
             @each $prop, $value in $variables
@@ -18,7 +18,7 @@
                 @each $prop, $value in $variables
                     --#{$prop}: #{$value}
 
-    // responsive font-size variables
+    // add responsive type-scale variables
     @each $screen-size, $font-size in $type-scale
         @if $screen-size == small
             @each $prop, $value in $font-size
@@ -32,7 +32,7 @@
     @each $prop, $value in $grid
         --#{$prop}: #{$value}
 
-    // type-scale and line-heights variable
+    // calculate type-scale and line-heights variable
     --h4: calc(var(--font-size) * var(--ratio))
     --h3: calc(var(--h4) * var(--ratio))
     --h2: calc(var(--h3) * var(--ratio))
