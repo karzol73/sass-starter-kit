@@ -1,3 +1,3 @@
 module.exports = {
-    content: ["**/*.pug"],
+    content: ["dist/index.html"],
 }
