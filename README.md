@@ -1,3 +1,3 @@
-#Simple sass starter kit
+Sass starter kit
 
 [demo](https://karzol73.github.io/sass-starter-kit/)
